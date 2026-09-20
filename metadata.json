@@ -1,0 +1,6 @@
+{
+  "name": "Nstwaki's Vibe Generator",
+  "description": "A birthday gift app that generates personalized vibes for the recipient.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
