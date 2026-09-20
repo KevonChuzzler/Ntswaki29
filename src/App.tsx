@@ -37,6 +37,10 @@ function BalloonPopGame({ onComplete }: { onComplete: () => void }) {
       const audio = new Audio('https://assets.mixkit.co/active_storage/sfx/2770/2770-preview.mp3');
       audio.volume = 0.5;
       audio.play();
+      // Using a lighter chime/ding sound instead of the party horn
+      const chime = new Audio('https://assets.mixkit.co/active_storage/sfx/2013/2013-preview.mp3');
+      chime.volume = 0.4;
+      chime.play();
       setPoppedCount(prev => prev + 1);
     }
     // Remove popped balloon and respawn a new one from above to keep plenty on screen
@@ -60,6 +64,9 @@ function BalloonPopGame({ onComplete }: { onComplete: () => void }) {
       setIsDone(true);
       const hooray = new Audio('https://assets.mixkit.co/active_storage/sfx/2852/2852-preview.mp3');
       hooray.play();
+      // Using a light, festive twinkling/magical sound for the final reveal
+      const magic = new Audio('https://assets.mixkit.co/active_storage/sfx/2019/2019-preview.mp3');
+      magic.play();
       confetti({ particleCount: 300, spread: 150, origin: { y: 0.6 } });
       setTimeout(onComplete, 3000);
     }
@@ -207,13 +214,13 @@ export default function App() {
                 <div className="flex flex-col gap-3">
                   <button
                     className="w-full px-8 py-4 bg-green-500 text-white rounded-full font-bold shadow-lg hover:bg-green-600 transition-all active:scale-95"
-                    onClick={() => window.location.href = 'https://www.google.com'} // Placeholder
+                    onClick={() => {}}
                   >
                     Go Celebrate
                   </button>
                   <button
                     className="w-full px-8 py-4 bg-blue-500 text-white rounded-full font-bold shadow-lg hover:bg-blue-600 transition-all active:scale-95"
-                    onClick={() => window.location.href = 'https://www.google.com'} // Placeholder
+                    onClick={() => {}}
                   >
                     Go Back to Sleep
                   </button>
